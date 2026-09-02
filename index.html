@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NeoCrunch | Frituras del Futuro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="site-header">
+    <div class="logo-wrap">
+      <div class="logo-dot"></div>
+      <p class="brand">NeoCrunch</p>
+    </div>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#simulador">Simulador</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <button class="ghost-btn">Acceso Proveedor</button>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="tag">Frituras 4.0 en entrega rapida</p>
+        <h1>El puesto de frituras se volvio una estacion intergalactica de sabor.</h1>
+        <p class="subtitle">
+          Papas, yuca, platanitos y mix picante cocinados con precision termica,
+          trazabilidad en tiempo real y experiencia inmersiva para tus clientes.
+        </p>
+        <div class="cta-row">
+          <button class="primary-btn">Crear pedido ahora</button>
+          <button class="secondary-btn">Ver promociones</button>
+        </div>
+        <div class="stats-grid">
+          <article>
+            <p class="stat-value">2.3 min</p>
+            <p class="stat-label">Tiempo medio de despacho</p>
+          </article>
+          <article>
+            <p class="stat-value">98%</p>
+            <p class="stat-label">Clientes que repiten</p>
+          </article>
+          <article>
+            <p class="stat-value">24/7</p>
+            <p class="stat-label">Panel de ventas en vivo</p>
+          </article>
+        </div>
+      </div>
+      <div class="hero-card">
+        <p class="small-head">Orden activa</p>
+        <h3>Combo Nebula Crunch</h3>
+        <ul>
+          <li>Base: Papa ondulada</li>
+          <li>Topping: Queso atomico</li>
+          <li>Salsa: Aji laser</li>
+        </ul>
+        <div class="progress-wrap">
+          <span>Preparacion 74%</span>
+          <div class="progress-bar"><span></span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="products">
+      <div class="section-head">
+        <p class="tag">Catalogo del futuro</p>
+        <h2>Frituras calibradas para antojos serios</h2>
+      </div>
+      <div class="product-grid">
+        <article class="product-card" data-name="Papas Turbo" data-price="14500">
+          <h3>Papas Turbo</h3>
+          <p>Corte grueso con sal ahumada y polvo de limon.</p>
+          <div class="card-foot"><span>$14.500</span><button class="add-btn">Agregar</button></div>
+        </article>
+        <article class="product-card" data-name="Yuca Quantum" data-price="20800">
+          <h3>Yuca Quantum</h3>
+          <p>Crocancia externa y centro suave con mojo criollo.</p>
+          <div class="card-foot"><span>$20.800</span><button class="add-btn">Agregar</button></div>
+        </article>
+        <article class="product-card" data-name="Platanitos Nova" data-price="15600">
+          <h3>Platanitos Nova</h3>
+          <p>Finos, dorados y con toque dulce picante.</p>
+          <div class="card-foot"><span>$15.600</span><button class="add-btn">Agregar</button></div>
+        </article>
+        <article class="product-card" data-name="Mix Meteoro" data-price="27200">
+          <h3>Mix Meteoro</h3>
+          <p>Papa, yuca y maiz crujiente con salsa especial.</p>
+          <div class="card-foot"><span>$27.200</span><button class="add-btn">Agregar</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="simulador" class="simulator">
+      <div>
+        <p class="tag">Simulador inteligente</p>
+        <h2>Arma el pedido y calcula ganancia por lote</h2>
+      </div>
+      <div class="sim-layout">
+        <div class="order-list" id="orderList">
+          <p class="empty">Todavia no agregas frituras.</p>
+        </div>
+        <aside class="summary">
+          <p>Total pedido</p>
+          <h3 id="totalPrice">$0.00</h3>
+          <p class="hint">Tip: combina 3 productos para activar promo Neon 12%.</p>
+          <button id="checkoutBtn" class="primary-btn full">Confirmar preventa</button>
+        </aside>
+      </div>
+    </section>
+
+    <section class="banner" id="contacto">
+      <h2>Conecta tu marca de frituras a una experiencia que no pasa desapercibida.</h2>
+      <p>Solicita la demo de NeoCrunch POS y recibe configuracion inicial sin costo.</p>
+      <button class="secondary-btn">Hablar con ventas</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>NeoCrunch Labs | Plataforma para vender frituras con estilo futurista.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
