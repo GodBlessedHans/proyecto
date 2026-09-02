@@ -5,10 +5,18 @@ const addButtons = document.querySelectorAll(".add-btn");
 
 const cart = [];
 
+function formatCOP(value) {
+  return new Intl.NumberFormat("es-CO", {
+    style: "currency",
+    currency: "COP",
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
 function renderCart() {
   if (cart.length === 0) {
     orderList.innerHTML = '<p class="empty">Todavia no agregas frituras.</p>';
-    totalPrice.textContent = "$0.00";
+    totalPrice.textContent = formatCOP(0);
     return;
   }
 
@@ -17,7 +25,7 @@ function renderCart() {
       return `
         <div class="order-item">
           <span>${item.name}</span>
-          <strong>$${item.price.toFixed(2)}</strong>
+          <strong>${formatCOP(item.price)}</strong>
         </div>
       `;
     })
@@ -28,9 +36,9 @@ function renderCart() {
 
   if (cart.length >= 3) {
     const withDiscount = total * 0.88;
-    totalPrice.textContent = `$${withDiscount.toFixed(2)} (Promo Neon)`;
+    totalPrice.textContent = `${formatCOP(withDiscount)} (Promo Neon)`;
   } else {
-    totalPrice.textContent = `$${total.toFixed(2)}`;
+    totalPrice.textContent = formatCOP(total);
   }
 }
 
@@ -56,5 +64,7 @@ checkoutBtn.addEventListener("click", () => {
     return;
   }
 
+  cart.length = 0;
+  renderCart();
   alert("Preventa creada. Tu modulo NeoCrunch enviara la orden al instante.");
 });
