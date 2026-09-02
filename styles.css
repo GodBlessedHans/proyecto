@@ -316,28 +316,8 @@ h1 {
 .order-item {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding: 10px 0;
   border-bottom: 1px solid rgba(89, 133, 163, 0.25);
-}
-
-.order-item div {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.remove-btn {
-  border-radius: 999px;
-  padding: 6px 12px;
-  color: #ffffff;
-  background: linear-gradient(120deg, #b01818, #ff3b3b);
-  font-size: 0.82rem;
-  font-weight: 600;
-}
-
-.remove-btn:hover {
-  filter: brightness(1.06);
 }
 
 .order-item:last-child {

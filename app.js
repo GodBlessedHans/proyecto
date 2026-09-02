@@ -21,14 +21,11 @@ function renderCart() {
   }
 
   const html = cart
-    .map((item, index) => {
+    .map((item) => {
       return `
         <div class="order-item">
           <span>${item.name}</span>
-          <div>
-            <strong>${formatCOP(item.price)}</strong>
-            <button class="remove-btn" data-index="${index}" aria-label="Quitar ${item.name}">Quitar</button>
-          </div>
+          <strong>${formatCOP(item.price)}</strong>
         </div>
       `;
     })
@@ -44,22 +41,6 @@ function renderCart() {
     totalPrice.textContent = formatCOP(total);
   }
 }
-
-orderList.addEventListener("click", (event) => {
-  const target = event.target;
-
-  if (!(target instanceof HTMLElement) || !target.classList.contains("remove-btn")) {
-    return;
-  }
-
-  const index = Number(target.dataset.index);
-  if (Number.isNaN(index)) {
-    return;
-  }
-
-  cart.splice(index, 1);
-  renderCart();
-});
 
 addButtons.forEach((button) => {
   button.addEventListener("click", () => {
