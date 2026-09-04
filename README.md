@@ -19,3 +19,7 @@ Landing page futurista y responsive para promocionar y vender frituras con un si
 - Conectar el boton de preventa a WhatsApp o API de pedidos.
 - Agregar panel admin para stock y precios.
 - Integrar pasarela de pago.
+
+## Estado del proyecto
+
+Version actual: prototipo listo.

@@ -21,7 +21,10 @@
       <a href="#simulador">Simulador</a>
       <a href="#contacto">Contacto</a>
     </nav>
-    <button class="ghost-btn">Acceso Proveedor</button>
+    <button class="ghost-btn" type="button">Acceso Proveedor</button>
+    <button class="ghost-btn profile-btn" id="profileBtn" type="button" aria-controls="profilePanel" aria-expanded="false">
+      Perfil
+    </button>
   </header>
 
   <main>
@@ -93,8 +96,62 @@
           <p>Papa, yuca y maiz crujiente con salsa especial.</p>
           <div class="card-foot"><span>$27.200</span><button class="add-btn">Agregar</button></div>
         </article>
+        <article class="product-card" data-name="Nachos Nebula" data-price="21900">
+          <h3>Nachos Nebula</h3>
+          <p>Totopos dorados con crema de aguacate y limon.</p>
+          <div class="card-foot"><span>$21.900</span><button class="add-btn">Agregar</button></div>
+        </article>
+        <article class="product-card" data-name="Cebolla Phantom" data-price="18700">
+          <h3>Cebolla Phantom</h3>
+          <p>Anillos crujientes con sal fina y humo dulce.</p>
+          <div class="card-foot"><span>$18.700</span><button class="add-btn">Agregar</button></div>
+        </article>
+        <article class="product-card" data-name="Salsa Graviton" data-price="11900">
+          <h3>Salsa Graviton</h3>
+          <p>Bote experimental con picante ahumado y toque citrico.</p>
+          <div class="card-foot"><span>$11.900</span><button class="add-btn">Agregar</button></div>
+        </article>
+        <article class="product-card" data-name="Maiz Eclipse" data-price="24300">
+          <h3>Maiz Eclipse</h3>
+          <p>Granos tostados con mantequilla especiada y chile dulce.</p>
+          <div class="card-foot"><span>$24.300</span><button class="add-btn" type="button">Agregar</button></div>
+        </article>
       </div>
     </section>
+
+    <div class="profile-backdrop" id="profileBackdrop" hidden></div>
+    <aside class="profile-panel" id="profilePanel" aria-hidden="true" hidden>
+      <div class="profile-head">
+        <div>
+          <p class="tag">Perfil activo</p>
+          <h3>Operador NeoCrunch</h3>
+        </div>
+        <button class="close-btn" id="closeProfileBtn" type="button" aria-label="Cerrar perfil">Cerrar</button>
+      </div>
+      <p class="profile-copy">
+        Este panel es funcional: resume el carrito actual y sirve como acceso rapido a la sesion.
+      </p>
+      <div class="profile-stats">
+        <article>
+          <span>Items en carrito</span>
+          <strong id="profileItems">0</strong>
+        </article>
+        <article>
+          <span>Total estimado</span>
+          <strong id="profileTotal">$0</strong>
+        </article>
+        <article>
+          <span>Estado</span>
+          <strong id="profileStatus">Sin pedidos</strong>
+        </article>
+      </div>
+      <div>
+        <p class="small-head">Ultimos productos</p>
+        <ul class="profile-list" id="profileList">
+          <li>Sin actividad reciente.</li>
+        </ul>
+      </div>
+    </aside>
 
     <section id="simulador" class="simulator">
       <div>
