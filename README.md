@@ -22,4 +22,4 @@ Landing page futurista y responsive para promocionar y vender frituras con un si
 
 ## Estado del proyecto
 
-Version actual: prototipo listo.
+Version actual: Version 1.0 publicada y funcional.
